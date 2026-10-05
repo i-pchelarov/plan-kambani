@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" width="100%" height="100%" style="background-color: #ffffff; font-family: 'Courier New', Courier, monospace;">
+    <!-- Заглавие и посоки -->
+    <g font-weight="bold" fill="#000">
+        <text x="500" y="40" font-size="18" text-anchor="middle">СТЪПКА 3: РАЗРЕЗ ПОГЛЕД ОТ ЮГ (ОБНОВЕН С ПОКРИВ)</text>
+        <text x="100" y="590" font-size="12" text-anchor="middle">◄ ЗАПАД (ЛЯВО)</text>
+        <text x="900" y="590" font-size="12" text-anchor="middle">ИЗТОК (ДЯСНО) ►</text>
+    </g>
+
+    <!-- МАСЩАБ: 1 метър = 133.33 пиксела. Базова линия Кота 0.00 (Основа) е на y=500 -->
+    <!-- Контур на сградата по дължина: 6.00м -> 800px (от x=100 до x=900) -->
+
+    <!-- КОНСТРУКТИВНА ПЛОЧА ОСНОВИ (Кота 0.00) -->
+    <rect x="50" y="500" width="900" height="15" fill="#dcdcdc" stroke="#333" stroke-width="2" />
+    <text x="50" y="535" font-size="11" fill="#000" font-weight="bold">▼ К. 0.00 (Плоча основи)</text>
+
+    <!-- ГОТОВ ПОД (+0.12 м -> 16 px над плочата -> y=484) -->
+    <rect x="100" y="484" width="800" height="16" fill="#f5f5f5" stroke="#666" stroke-width="1" stroke-dasharray="2,2" />
+    <text x="50" y="475" font-size="11" fill="#666">-- К. +0.12 (Готов под)</text>
+
+    <!-- ВЪНШНИ СТЕНИ (Дебелина 8 см -> 11 px. Височина до ската на покрива +2.80м -> y=127) -->
+    <!-- Западна стена (вляво) -->
+    <rect x="89" y="127" width="11" height="373" fill="#ffcdd2" stroke="#b71c1c" stroke-width="1.5" />
+    <!-- Източна стена (вдясно) -->
+    <rect x="900" y="127" width="11" height="373" fill="#ffcdd2" stroke="#b71c1c" stroke-width="1.5" />
+
+    <!-- ПОКРИВНА КОНСТРУКЦИЯ (Надлъжен поглед на двускатния покрив) -->
+    <!-- Тъй като гледаме от Юг, виждаме надлъжния скат на покрива. Предната му повърхност се издига от кота 2.80м (y=127) до било 3.80м (y=(-7) поради 9см дебелина)) -->
+    <!-- Хоризонтално чело на покривната конструкция (стреха/гредоред на покрива с дебелина 9 см -> 12px) -->
+    <rect x="70" y="115" width="860" height="12" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5" />
+
+    <!-- Символично загатване на наклона в заден план (посока към билото в центъра на сградата по ширина) -->
+    <polygon points="100,115 500,60 900,115" fill="none" stroke="#e65100" stroke-width="1" stroke-dasharray="4,4" />
+    <text x="500" y="50" font-size="11" fill="#e65100" font-weight="bold" text-anchor="middle">▲ НАДЛЪЖНО БИЛО ПОКРИВ (+3.80)</text>
+
+    <!-- ВЪТРЕШНА СТЕНА НА БАНЯТА (На 4.00 м отляво -> x=633) -->
+    <!-- Височина от под до долен ръб на гредореда на второ ниво +2.10 м (y=220) -->
+    <rect x="633" y="220" width="11" height="264" fill="#ffcdd2" stroke="#b71c1c" stroke-width="1.5" />
+    <text x="766" y="360" font-size="14" fill="#1565c0" font-weight="bold" text-anchor="middle">БАНЯ</text>
+
+    <!-- ВТОРО НИВО / ПОДПОКРИВНО ПРОСТРАНСТВО (ЕЛИПСА/ЕМПОРЕ) -->
+    <!-- Чело на гредореда (Дебелина 10 см). Долен ръб на +2.10м -> y=220, горен ръб на +2.20м -> y=206 -->
+    <rect x="100" y="206" width="800" height="14" fill="#d7ccc8" stroke="#5d4037" stroke-width="1.5" />
+    <text x="366" y="195" font-size="11" fill="#5d4037" font-weight="bold" text-anchor="middle">ГРЕДОРЕД Н2 (+2.20)</text>
+
+    <!-- ОЧЕРТАНИЕ НА ПОДПОКРИВНОТО ПРОСТРАНСТВО (Заден план, където платформата заема 2 метра навътре) -->
+    <rect x="100" y="127" width="800" height="79" fill="#efebe9" fill-opacity="0.4" stroke="#8d6e63" stroke-width="1" stroke-dasharray="3,3" />
+    <text x="500" y="165" font-size="12" fill="#5d4037" font-weight="bold" text-anchor="middle">ПОДПОКРИВНО ПРОСТРАНСТВО (ЕМПОРЕ)</text>
+
+    <!-- СВЕТЪЛ ОТВОР КЪМ ПЪРВО НИВО (Дневна зона вляво) -->
+    <text x="366" y="340" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">ДНЕВНА / ОБЩО ПОМЕЩЕНИЕ</text>
+    <text x="366" y="365" font-size="12" fill="#777" text-anchor="middle" font-style="italic">(Отворен обем под гредореда, светла вис. 1.98м)</text>
+
+    <!-- КОМИН (При x=633, преминава през преградната стена и през покрива нагоре) -->
+    <rect x="644" y="20" width="33" height="480" fill="#b0bec5" stroke="#37474f" stroke-width="1.5" fill-opacity="0.8" />
+    <line x1="644" y1="20" x2="677" y2="20" stroke="#37474f" stroke-width="2" />
+    <text x="660" y="12" font-size="10" fill="#37474f" font-weight="bold" text-anchor="middle">К.</text>
+
+    <!-- СТЪЛБА КЪМ НИВО 2 (В Югоизточния ъгъл - НА ПРЕДЕН ПЛАН, ПРЕД БАНЯТА) -->
+    <!-- Започва от готовият под (+0.12м -> y=484) при x=633 и се изкачва надясно до кота +2.20м (y=206) на източната стена -->
+    <g stroke="#c62828" stroke-width="2">
+        <line x1="633" y1="484" x2="766" y2="206" stroke-width="3.5" /> <!-- Косоур -->
+        <line x1="633" y1="484" x2="633" y2="460" />
+        <!-- Стъпала -->
+        <line x1="655" y1="438" x2="675" y2="438" />
+        <line x1="682" y1="382" x2="702" y2="382" />
+        <line x1="710" y1="326" x2="730" y2="326" />
+        <line x1="738" y1="270" x2="758" y2="270" />
+        <line x1="766" y1="206" x2="766" y2="226" />
+    </g>
+    <text x="715" y="320" font-size="11" fill="#c62828" font-weight="bold" transform="rotate(-24 715 320)">СТЪЛБА</text>
+
+    <!-- ТЕРЕН -->
+    <line x1="10" y1="515" x2="89" y2="515" stroke="#8d6e63" stroke-width="3" />
+    <line x1="911" y1="515" x2="990" y2="515" stroke="#8d6e63" stroke-width="3" />
+</svg>

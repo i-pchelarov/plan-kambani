@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" style="background-color: #ffffff; font-family: 'Courier New', Courier, monospace;">
+    <!-- Заглавие и посоки -->
+    <g font-weight="bold" fill="#000">
+        <text x="400" y="40" font-size="18" text-anchor="middle">СТЪПКА 2: РАЗРЕЗ ПОГЛЕД ОТ ИЗТОК (ОБНОВЕН)</text>
+        <text x="100" y="540" font-size="12" text-anchor="middle">◄ ЮГ (ЛЯВО)</text>
+        <text x="700" y="540" font-size="12" text-anchor="middle">СЕВЕР (ДЯСНО) ►</text>
+    </g>
+
+    <!-- МАСЩАБ: 1 метър = 100 пиксела. Базова линия Кота 0.00 (Основа) е на y=450 -->
+
+    <!-- КОНСТРУКТИВНА ПЛОЧА ОСНОВИ (Кота 0.00) -->
+    <rect x="50" y="450" width="700" height="15" fill="#dcdcdc" stroke="#333" stroke-width="2" />
+    <text x="50" y="480" font-size="11" fill="#000" font-weight="bold">▼ К. 0.00 (Плоча основи)</text>
+
+    <!-- ГОТОВ ПОД (+0.12 м -> 12 px над плочата -> y=438) -->
+    <rect x="188" y="438" width="424" height="12" fill="#f5f5f5" stroke="#666" stroke-width="1" stroke-dasharray="2,2" />
+    <text x="50" y="434" font-size="11" fill="#666">-- К. +0.12 (Готов под)</text>
+    <text x="250" y="425" font-size="10" fill="#999">Светъл отвор: 1.98м</text>
+
+    <!-- СТЕНИ (Дебелина 8 см -> 8 px. Стъпват на плочата y=450) -->
+    <!-- Южна стена (вляво): от y=450 до скат y=170 (Кота +2.80) -->
+    <rect x="180" y="170" width="8" height="280" fill="#ffcdd2" stroke="#b71c1c" stroke-width="1.5" />
+    <!-- Северна стена (вдясно): от y=450 до скат y=170 (Кота +2.80) -->
+    <rect x="612" y="170" width="8" height="280" fill="#ffcdd2" stroke="#b71c1c" stroke-width="1.5" />
+
+    <!-- ВТОРО НИВО (Гредоред 10 см в Северната половина. Долен ръб y=240 (Кота +2.10), горен ръб y=230 (Кота +2.20)) -->
+    <rect x="412" y="230" width="200" height="10" fill="#d7ccc8" stroke="#5d4037" stroke-width="1.5" />
+    <text x="512" y="222" font-size="11" fill="#5d4037" font-weight="bold" text-anchor="middle">ГРЕДОРЕД Н2 (+2.20)</text>
+
+    <!-- ПОКРИВ (Двукатен гредоред 9 см. Вътрешно било на x=400, y=70 (Кота +3.80 от основата)) -->
+    <!-- Ляв скат (Юг) -->
+    <polygon points="150,174 400,61 400,70 150,183" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5" />
+    <!-- Десен скат (Север) -->
+    <polygon points="400,61 650,174 650,183 400,70" fill="#ffe0b2" stroke="#e65100" stroke-width="1.5" />
+    <text x="400" y="50" font-size="11" fill="#e65100" font-weight="bold" text-anchor="middle">▲ БИЛО ПОКРИВ (+3.80)</text>
+
+    <!-- СТРУКТУРНИ ЕЛЕМЕНТИ (Централен поп) -->
+    <rect x="396" y="70" width="8" height="380" fill="#ffe0b2" stroke="#e65100" stroke-width="1" />
+    <line x1="396" y1="150" x2="350" y2="100" stroke="#e65100" stroke-width="2" />
+    <line x1="404" y1="150" x2="450" y2="100" stroke="#e65100" stroke-width="2" />
+
+    <!-- ПРОЗОРЕЦ НА БАНЯТА (В дъното на северния сектор, тъй като банята е зад стълбата) -->
+    <!-- Долен ръб на 150 см от готовия под -> Кота +1.62 (y = 450 - 162 = 288). Размер 50х50 px -->
+    <rect x="520" y="238" width="50" height="50" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5" stroke-dasharray="3,3" />
+    <line x1="545" y1="238" x2="545" y2="288" stroke="#1565c0" stroke-width="1" stroke-dasharray="3,3" />
+    <text x="545" y="303" font-size="10" fill="#1565c0" text-anchor="middle">ПР. БАНЯ</text>
+
+    <!-- КОМИН (Вписан в банята, на кота 0.00, разположен до ръба на платформата x=412) -->
+    <rect x="412" y="40" width="25" height="410" fill="#b0bec5" stroke="#37474f" stroke-width="1.5" fill-opacity="0.8" />
+    <line x1="412" y1="40" x2="437" y2="40" stroke="#37474f" stroke-width="2" />
+    <text x="424" y="30" font-size="10" fill="#37474f" font-weight="bold" text-anchor="middle">КОМИН</text>
+
+    <!-- СТЪЛБА КЪМ НИВО 2 (Преместена отляво на банята/външно за нея) -->
+    <!-- Започва от готовия под (y=438) и се изкачва надясно до началото на платформата (x=412, y=230) -->
+    <!-- Проекция по хоризонтала: 100 см -> започва от x=312 и свършва на x=412 -->
+    <g stroke="#c62828" stroke-width="2">
+        <line x1="312" y1="438" x2="412" y2="230" stroke-width="3" /> <!-- Косоур -->
+        <line x1="312" y1="438" x2="312" y2="418" /> <!-- Първо чело -->
+        <!-- Стъпала по наклона -->
+        <line x1="322" y1="417" x2="332" y2="417" />
+        <line x1="342" y1="375" x2="352" y2="375" />
+        <line x1="362" y1="333" x2="372" y2="333" />
+        <line x1="382" y1="291" x2="392" y2="291" />
+        <line x1="402" y1="249" x2="412" y2="249" />
+    </g>
+    <text x="345" y="330" font-size="11" fill="#c62828" font-weight="bold" transform="rotate(-64 345 330)">СТЪЛБА</text>
+
+    <!-- ТЕРЕН -->
+    <line x1="20" y1="465" x2="180" y2="465" stroke="#8d6e63" stroke-width="3" />
+    <line x1="620" y1="465" x2="780" y2="465" stroke="#8d6e63" stroke-width="3" />
+</svg>
