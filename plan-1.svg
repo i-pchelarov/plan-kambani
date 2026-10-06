@@ -1,89 +1,125 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 650" width="100%" height="100%" style="background-color: #ffffff; font-family: 'Courier New', Courier, monospace;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 750" width="100%" height="100%" style="background-color: #ffffff; font-family: 'Courier New', Courier, monospace;">
     <!-- Обозначение на посоките -->
     <g transform="translate(650, 40)" font-size="12" font-weight="bold" fill="#555" text-anchor="middle">
         <text x="0" y="-15">СЕВЕР (▲)</text>
-        <text x="0" y="560">ЮГ (▼)</text>
-        <text x="-600" y="280" text-anchor="start">◄ ЗАПАД</text>
-        <text x="600" y="280" text-anchor="end">ИЗТОК ►</text>
+        <text x="0" y="660">ЮГ (▼)</text>
+        <text x="-600" y="320" text-anchor="start">◄ ЗАПАД</text>
+        <text x="600" y="320" text-anchor="end">ИЗТОК ►</text>
     </g>
 
     <!-- ================= НИВО 1 (ПАРТЕР) ================= -->
-    <g transform="translate(50, 100)">
-        <!-- Заглавие -->
-        <text x="300" y="-30" font-size="18" font-weight="bold" text-anchor="middle" fill="#000">НИВО 1 - ПАРТЕР (0.00)</text>
+    <g transform="translate(50, 120)">
+        <!-- ЛИНЕЙНИ РАЗМЕРИ НАЙ-ОТГОРЕ -->
+        <g font-size="11" fill="#444" stroke="#444" stroke-width="0.5">
+            <line x1="50" y1="10" x2="550" y2="10" />
+            <line x1="50" y1="5" x2="50" y2="15" />
+            <line x1="550" y1="5" x2="550" y2="15" />
+            <text x="300" y="2" stroke="none" text-anchor="middle" font-weight="bold" font-size="13">ОБЩА ДЪЛЖИНА: 6.00 м</text>
+        </g>
 
-        <!-- Външен контур на сградата (6.00m x 4.00m -> 500px x 333px) -->
-        <!-- Мащаб: 1 метър = 83.33 пиксела -->
+        <text x="300" y="-20" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">НИВО 1 - ПАРТЕР (Кота +0.12 Под)</text>
         <rect x="50" y="50" width="500" height="333" fill="#f5f5f5" stroke="#000" stroke-width="3" />
 
-        <!-- Баня вдясно (2.00m дължина, 1.50m ширина) -->
-        <!-- Позиция: от x = 383 до 550, от y = 50 до 175 -->
+        <!-- Баня (2.00m х 1.50m -> 167px x 125px) -->
         <rect x="383" y="50" width="167" height="125" fill="#e3f2fd" stroke="#000" stroke-width="2" />
-        <text x="455" y="115" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565c0">БАНЯ</text>
+        <text x="466" y="115" font-size="13" font-weight="bold" text-anchor="middle" fill="#1565c0">БАНЯ 200 х 150</text>
 
-        <!-- Комин в долния ляв ъгъл на банята (25х25 см -> 21х21 px) -->
-        <!-- Разположение: x = 383, y = 175 - 21 = 154 -->
+        <!-- ПРОЗОРЕЦ НА БАНЯТА (ОТ ИЗТОК) - широк 50см, отстъп 50см от север (нагоре) -->
+        <!-- y = 50 (начало) + 42px (50cm) = 92, височина 42px (50cm) -> до y=134 -->
+        <rect x="547" y="92" width="6" height="42" fill="#ffffff" stroke="#1565c0" stroke-width="1.5" />
+        <text x="560" y="118" font-size="9" fill="#1565c0" font-weight="bold">ПР. 50</text>
+
+        <!-- ВРАТА НА БАНЯТА (ОТ ЗАПАД) - широка 60см, отстъп 45см от север (нагоре) -->
+        <!-- y = 50 + 37px (45cm) = 87, отвор 50px (60cm) -> до y=137. Посока на отваряне навън/наляво -->
+        <rect x="380" y="87" width="6" height="50" fill="#ffffff" stroke="#1565c0" stroke-width="0" /> <!-- Симулиран отвор -->
+        <line x1="383" y1="137" x2="333" y2="137" stroke="#5d4037" stroke-width="2" /> <!-- Крило на вратата -->
+        <path d="M 383,87 A 50,50 0 0,0 333,137" fill="none" stroke="#5d4037" stroke-dasharray="2,2" />
+        <text x="370" y="80" font-size="9" fill="#5d4037" font-weight="bold" text-anchor="end">ВР. 60</text>
+
+        <!-- Комин с текст -->
         <rect x="383" y="154" width="21" height="21" fill="#757575" stroke="#000" stroke-width="1.5" />
-        <line x1="383" y1="154" x2="404" y2="175" stroke="#fff" stroke-width="1" />
-        <line x1="404" y1="154" x2="383" y2="175" stroke="#fff" stroke-width="1" />
-        <text x="410" y="148" font-size="10" fill="#333" font-weight="bold">К.</text>
+        <line x1="383" y1="154" x2="404" y2="175" stroke="#fff" />
+        <line x1="404" y1="154" x2="383" y2="175" stroke="#fff" />
+        <text x="375" y="170" font-size="10" fill="#333" font-weight="bold" text-anchor="end">КОМИН 25х25</text>
 
-        <!-- Стълба - най-вдясно (60 см широка, 100 см дълга) -->
-        <!-- Разположение до източната стена: x = 550 - 50 = 500. Дължина надолу по y от банята: 175 до 258 -->
+        <!-- Стълба ПРЕД банята в Югоизточния ъгъл -->
         <g fill="#ffebee" stroke="#c62828" stroke-width="2">
             <rect x="500" y="175" width="50" height="83" />
-            <!-- Стъпала -->
-            <line x1="500" y1="196" x2="550" y2="196" />
-            <line x1="500" y1="217" x2="550" y2="217" />
-            <line x1="500" y1="238" x2="550" y2="238" />
-            <!-- Посока на качване (нагоре към второ ниво) -->
-            <line x1="525" y1="245" x2="525" y2="185" stroke-dasharray="3,3" />
+            <line x1="500" y1="202" x2="550" y2="202" />
+            <line x1="500" y1="230" x2="550" y2="230" />
+            <line x1="525" y1="250" x2="525" y2="185" stroke-dasharray="3,3" />
             <polygon points="525,180 521,188 529,188" fill="#c62828" />
         </g>
-        <text x="490" y="222" font-size="11" fill="#c62828" font-weight="bold" text-anchor="end">СТЪЛБА</text>
+        <text x="525" y="275" font-size="11" fill="#c62828" font-weight="bold" text-anchor="middle">СТЪЛБА 60 х 100</text>
 
-        <!-- Дневна зона -->
-        <text x="210" y="210" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">ДНЕВНА / ОБЩО ПОМЕЩЕНИЕ</text>
+        <!-- Дневна -->
+        <text x="210" y="210" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">ДНЕВНА ЗОНА</text>
 
-        <!-- Две двукрили южни врати (165 см обща ширина -> 137.5 px; всяко крило по 68.7 px) -->
-        <!-- Лява врата: от 121px до 258.5px -->
-        <line x1="121" y1="383" x2="121" y2="451.7" stroke="#c62828" stroke-width="2" /> <!-- Ляво крило -->
-        <line x1="258.5" y1="383" x2="258.5" y2="451.7" stroke="#c62828" stroke-width="2" /> <!-- Дясно крило -->
-        <path d="M 121,451.7 A 68.7,68.7 0 0,0 189.7,383" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="3,3" />
-        <path d="M 258.5,451.7 A 68.7,68.7 0 0,1 189.8,383" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="3,3" />
+        <!-- Две двукрили южни врати с посока на отваряне -->
+        <line x1="121" y1="383" x2="121" y2="451.7" stroke="#c62828" stroke-width="2" />
+        <line x1="258.5" y1="383" x2="258.5" y2="451.7" stroke="#c62828" stroke-width="2" />
+        <path d="M 121,451.7 A 68.7,68.7 0 0,0 189.7,383" fill="none" stroke="#c62828" stroke-dasharray="3,3" />
+        <path d="M 258.5,451.7 A 68.7,68.7 0 0,1 189.8,383" fill="none" stroke="#c62828" stroke-dasharray="3,3" />
 
-        <!-- Дясна врата: от 341px до 478.5px -->
-        <line x1="341" y1="383" x2="341" y2="451.7" stroke="#c62828" stroke-width="2" /> <!-- Ляво крило -->
-        <line x1="478.5" y1="383" x2="478.5" y2="451.7" stroke="#c62828" stroke-width="2" /> <!-- Дясно крило -->
-        <path d="M 341,451.7 A 68.7,68.7 0 0,0 409.7,383" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="3,3" />
-        <path d="M 478.5,451.7 A 68.7,68.7 0 0,1 409.8,383" fill="none" stroke="#c62828" stroke-width="1.5" stroke-dasharray="3,3" />
+        <line x1="341" y1="383" x2="341" y2="451.7" stroke="#c62828" stroke-width="2" />
+        <line x1="478.5" y1="383" x2="478.5" y2="451.7" stroke="#c62828" stroke-width="2" />
+        <path d="M 341,451.7 A 68.7,68.7 0 0,0 409.7,383" fill="none" stroke="#c62828" stroke-dasharray="3,3" />
+        <path d="M 478.5,451.7 A 68.7,68.7 0 0,1 409.8,383" fill="none" stroke="#c62828" stroke-dasharray="3,3" />
+
+        <!-- ЛИНЕЙНИ РАЗМЕРИ И ОТСТОЯНИЯ ОТ ЮГ (ВЪЗСТАНОВЕНИ) -->
+        <g font-size="11" fill="#444" stroke="#444" stroke-width="0.5">
+            <!-- Спомагателни тънки линии -->
+            <line x1="50" y1="383" x2="50" y2="420" stroke="#bbb" />
+            <line x1="121" y1="383" x2="121" y2="420" stroke="#bbb" />
+            <line x1="258.5" y1="383" x2="258.5" y2="420" stroke="#bbb" />
+            <line x1="341" y1="383" x2="341" y2="420" stroke="#bbb" />
+            <line x1="478.5" y1="383" x2="478.5" y2="420" stroke="#bbb" />
+            <line x1="550" y1="383" x2="550" y2="420" stroke="#bbb" />
+
+            <!-- Основна линия на квотите -->
+            <line x1="50" y1="410" x2="550" y2="410" />
+
+            <!-- Текстови стойности в см -->
+            <text x="85" y="405" stroke="none" text-anchor="middle" font-weight="bold">85</text>
+            <text x="190" y="405" stroke="none" text-anchor="middle" fill="#c62828" font-weight="bold">165 (Врата)</text>
+            <text x="300" y="405" stroke="none" text-anchor="middle" font-weight="bold">100</text>
+            <text x="410" y="405" stroke="none" text-anchor="middle" fill="#c62828" font-weight="bold">165 (Врата)</text>
+            <text x="515" y="405" stroke="none" text-anchor="middle" font-weight="bold">85</text>
+        </g>
+
+        <!-- Страничен габарит -->
+        <g font-size="11" fill="#444" stroke="#444" stroke-width="0.5">
+            <line x1="15" y1="50" x2="15" y2="383" />
+            <text x="10" y="216" stroke="none" text-anchor="middle" font-weight="bold" transform="rotate(-90 10 216)">ОБЩА ШИРИНА: 4.00 м</text>
+        </g>
     </g>
 
     <!-- ================= НИВО 2 (ПОДПОКРИВНО) ================= -->
-    <g transform="translate(700, 100)">
-        <!-- Заглавие -->
-        <text x="300" y="-30" font-size="18" font-weight="bold" text-anchor="middle" fill="#000">НИВО 2 - ПОДПОКРИВНО (+2.60)</text>
-
-        <!-- Външен общ контур на сградата (за визуален ориентир, пунктиран) -->
+    <g transform="translate(700, 120)">
+        <text x="300" y="-20" font-size="16" font-weight="bold" text-anchor="middle" fill="#000">НИВО 2 - ПОДПОКРИВНО (Кота +2.20 Под)</text>
         <rect x="50" y="50" width="500" height="333" fill="none" stroke="#bbb" stroke-width="1" stroke-dasharray="5,5" />
-
-        <!-- Подпокривна платформа (6.00m дължина, 2.00m ширина в горната част) -->
         <rect x="50" y="50" width="500" height="167" fill="#efebe9" stroke="#5d4037" stroke-width="3" />
-        <text x="250" y="130" font-size="14" font-weight="bold" fill="#5d4037" text-anchor="middle">ПОДПОКРИВНА ПЛАТФОРМА / ЕМПОРЕ</text>
-
-        <!-- Контур на банята отдолу (пунктиран) и комина -->
-        <line x1="383" y1="50" x2="383" y2="167" stroke="#bcaaa4" stroke-width="1.5" stroke-dasharray="4,4" />
+        <text x="250" y="130" font-size="13" font-weight="bold" fill="#5d4037" text-anchor="middle">ПОДПОКРИВНА ПЛАТФОРМА (ЕМПОРЕ)</text>
         <rect x="383" y="146" width="21" height="21" fill="#757575" stroke="#000" stroke-width="1.5" />
-
-        <!-- Отвор/Празно пространство над първо ниво -->
-        <rect x="50" y="217" width="500" height="166" fill="#fff" stroke="#ccc" stroke-width="1" />
-        <text x="300" y="310" font-size="13" fill="#999" text-anchor="middle" font-style="italic">СВЕТЪЛ ОТВОР КЪМ НИВО 1 (DOUBLE HEIGHT)</text>
-
-        <!-- Горна точка на стълбата (излизаща в десния край на платформата) -->
         <g fill="#ffebee" stroke="#c62828" stroke-width="2">
             <rect x="500" y="175" width="50" height="42" />
-            <line x1="500" y1="196" x2="550" y2="196" />
-            <circle cx="525" cy="185" r="3" fill="#c62828" />
+            <circle cx="525" cy="196" r="3" fill="#c62828" />
         </g>
+        <rect x="50" y="217" width="500" height="166" fill="#fff" stroke="#ccc" stroke-width="1" />
+        <text x="300" y="310" font-size="12" fill="#999" text-anchor="middle" font-style="italic">ОТВОРЕН СВЕТЪЛ ОБЕМ КЪМ НИВО 1</text>
+    </g>
+
+    <!-- ИНФОРМАЦИОННА ТАБЛИЦА -->
+    <g transform="translate(950, 600)" font-size="11" fill="#000">
+        <rect x="0" y="0" width="300" height="100" fill="#fafafa" stroke="#000" stroke-width="1.5" />
+        <line x1="0" y1="25" x2="300" y2="25" stroke="#000" />
+        <line x1="0" y1="50" x2="300" y2="50" stroke="#000" />
+        <line x1="0" y1="75" x2="300" y2="75" stroke="#000" />
+        <line x1="100" y1="75" x2="100" y2="100" stroke="#000" />
+        <text x="10" y="18" font-weight="bold">ОБЕКТ: Еднофамилна постройка (6х4м)</text>
+        <text x="10" y="43" font-weight="bold">ЧЕРТЕЖ: Архитектурен план - Ниво 1 и Ниво 2</text>
+        <text x="10" y="68">ФАЗА: Концептуален проект</text>
+        <text x="10" y="91">МАЩАБ: М 1:50</text>
+        <text x="110" y="91">ДАТА: 05.10.2026 г.</text>
     </g>
 </svg>
