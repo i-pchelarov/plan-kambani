@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Архитектурен Проект - "Камбани"</title>
+    <style>
+        :root {
+            --primary: #5d4037;
+            --accent: #e65100;
+            --bg: #f5f5f5;
+            --panel: #ffffff;
+            --text: #333333;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); color: var(--text); display: flex; height: 100vh; overflow: hidden; }
+
+        /* Лява навигация */
+        aside { width: 280px; background: var(--primary); color: white; padding: 20px; display: flex; flex-direction: column; gap: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1); }
+        aside h1 { font-size: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px; color: #ffe0b2; }
+        .nav-btn { background: transparent; border: none; color: #d7ccc8; padding: 12px 15px; text-align: left; font-size: 14px; cursor: pointer; border-radius: 4px; transition: all 0.3s; font-weight: 600; }
+        .nav-btn:hover { background: rgba(255,255,255,0.1); color: white; }
+        .nav-btn.active { background: var(--accent); color: white; }
+
+        /* Основна зона */
+        main { flex: 1; padding: 30px; overflow-y: auto; position: relative; }
+        .tab-content { display: none; flex-direction: column; gap: 30px; animation: fadeIn 0.4s ease; }
+        .tab-content.active { display: flex; }
+
+        /* Чертожни панели */
+        .grid-view { display: grid; grid-template-columns: 1fr; gap: 30px; }
+        @media(min-width: 1200px) { .grid-view { grid-template-columns: 1fr 1fr; } }
+
+        .drawing-card { background: var(--panel); border-radius: 8px; border: 1.5px solid #e0e0e0; box-shadow: 0 4px 6px rgba(0,0,0,0.05); padding: 15px; display: flex; flex-direction: column; gap: 10px; }
+        .drawing-card h3 { font-size: 15px; color: var(--primary); border-left: 4px solid var(--accent); padding-left: 10px; }
+        .svg-container { width: 100%; overflow-x: auto; background: #fafafa; border: 1px inset #eee; border-radius: 4px; padding: 10px; display: flex; justify-content: center; }
+
+        svg { max-width: 100%; height: auto; display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+<!-- НАВИГАЦИОННО МЕНЮ -->
+<aside>
+    <h1>ПРОЕКТ "КАМБАНИ"</h1>
+    <button class="nav-btn active" onclick="switchTab('level-plans')">1. Разпределение (Ниво 1 и 2)</button>
+    <button class="nav-btn" onclick="switchTab('east-views')">2. Изглед ИЗТОК (Разрез & Фасада)</button>
+    <button class="nav-btn" onclick="switchTab('south-views')">3. Изглед ЮГ (Разрез & Фасада)</button>
+</aside>
+
+<!-- ОСНОВНО СЪДЪРЖАНИЕ -->
+<main>
+
+    <!-- СЕКЦИЯ 1: ПЛАНОВЕ НИВО 1 И 2 -->
+    <div id="level-plans" class="tab-content active">
+        <div class="grid-view">
+            <div class="drawing-card">
+                <div class="svg-container">
+                    <object type="image/svg+xml" data="../plan-2levels-top.svg"></object>
+                </div>
+            </div>
+<!--            <div class="drawing-card">-->
+<!--                <h3>План на Ниво 2 (Емпоре Платформа)</h3>-->
+<!--                <div class="svg-container">-->
+<!--                    &lt;!&ndash; Поставете вашия SVG код за Ниво 2 тук &ndash;&gt;-->
+<!--                    <svg width="800" height="600" viewBox="0 0 800 600">-->
+<!--                        &lt;!&ndash; <g> ... </g> &ndash;&gt;-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+    <!-- СЕКЦИЯ 2: ИЗГЛЕД ИЗТОК -->
+    <div id="east-views" class="tab-content">
+        <div class="grid-view">
+            <div class="drawing-card">
+<!--                <h3>Конструктивен Разрез - Поглед от Изток</h3>-->
+                <div class="svg-container">
+                    <object type="image/svg+xml" data="../projection-east.svg"></object>
+                </div>
+            </div>
+<!--            <div class="drawing-card">-->
+<!--                <h3>Архитектурна Фасада - Изток</h3>-->
+<!--                <div class="svg-container">-->
+<!--                    &lt;!&ndash; Поставете вашия SVG код за Фасада Изток тук &ndash;&gt;-->
+<!--                    <svg width="800" height="700" viewBox="0 0 800 700">-->
+<!--                        &lt;!&ndash; Вградете фасадата с двата прозореца и фронтона &ndash;&gt;-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+    <!-- СЕКЦИЯ 3: ИЗГЛЕД ЮГ -->
+    <div id="south-views" class="tab-content">
+        <div class="grid-view">
+            <div class="drawing-card">
+<!--                <h3>Конструктивен Разрез - Поглед от Юг</h3>-->
+                <div class="svg-container">
+                    <object type="image/svg+xml" data="../projection-south.svg"></object>
+                </div>
+            </div>
+<!--            <div class="drawing-card">-->
+<!--                <h3>Архитектурна Фасада - Юг</h3>-->
+<!--                <div class="svg-container">-->
+<!--                    &lt;!&ndash; Поставете вашия SVG код за Фасада Юг тук &ndash;&gt;-->
+<!--                    <svg width="900" height="700" viewBox="0 0 900 700">-->
+<!--                        &lt;!&ndash; Вградете фасадата с керемидите, вратите и комина &ndash;&gt;-->
+<!--                    </svg>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+
+</main>
+
+<!-- ИНТЕРАКТИВЕН СКРИПТ ЗА СМЕНЯНЕ НА ТАБОВЕ -->
+<script>
+    function switchTab(tabId) {
+        // Скриване на всички секции
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        // Деактивиране на всички бутони
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        // Активиране на избраните
+        document.getElementById(tabId).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+</script>
+</body>
+</html>
