@@ -159,6 +159,11 @@
             <circle cx="588" cy="380" r="2" fill="#c62828" stroke="none" />
         </g>
 
+        <!-- ВЪНШЕН КОМИН НА ПРЕДЕН ПЛАН ПРЕЗ ПОКРИВА (x=550..575, на 4.00 м от Запад) -->
+        <rect x="550" y="80" width="25" height="110" fill="#b0bec5" stroke="#37474f" stroke-width="1.5" />
+        <rect x="547" y="80" width="31" height="5" fill="#37474f" /> <!-- Шапка на комина -->
+
+
         <!-- ДЕФИНИЦИЯ НА ТЕКСТУРА ЗА КЕРЕМИДИ (Поставя се в началото на вашия SVG файл, в <defs> тага, ако има такъв) -->
         <defs>
             <pattern id="tiles" width="20" height="15" patternUnits="userSpaceOnUse">
